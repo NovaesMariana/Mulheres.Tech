@@ -3,4 +3,4 @@
  */
 
 // Define o <title> desta página:
-setTitle("Página modelo");
+setTitle("Sobre o site");

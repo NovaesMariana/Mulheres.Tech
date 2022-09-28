@@ -15,12 +15,6 @@
     background-color: #eeeeee;
 }
 
-.card img {
-    width: 100%;
-    border-radius: .4rem .4rem 0 0;
-    aspect-ratio: 4 / 3;
-}
-
 .card h3, .card span {
     margin: 0;
     padding: .4rem;
@@ -30,28 +24,63 @@
     display: block;
 }
 
+.card-img {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: purple;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: .4rem .4rem 0 0;
+}
+
+/* Lista de imagens das div */
+
+div[data-href="site"] .card-img {
+    background-image: url('/img/logo01.png');
+}
+
+div[data-href="team"] .card-img {
+    background-image: url('/img/mulherestech.png');
+}
+
+div[data-href="policies"] .card-img {
+    background-image: url('/img/privacity.png');
+}
+
+div[data-href="contacts"] .card-img {
+    background-image: url('/img/contacts.jpg');
+}
+
 @media (min-width: 578px) {
 
     .grid {
         grid-template-columns: auto auto;
     }
 
-    .card {
-
-    }
-
-    .card:nth-child(odd) {
-
-    }
-    
-    .card:nth-child(even) {
-
-    }
-
 }
 
+aside nav {
+    display: table;
+    margin: auto;
+    margin-bottom: 1rem;
+}
 
-data-bg="/img/logo01.png" 
-data-img="/img/mulherestech.png"
-data-img="/img/privacity.png"
-<img src="/img/contacts.jpg" alt="Faça contato">
+aside nav a {
+    display: flex;
+    padding: .4rem 0;
+}
+
+aside nav a:hover {
+    text-decoration: none;
+}
+
+aside nav i {
+    font-size: 1.3rem;
+}
+
+aside nav a span {
+    display: inline-block;
+    margin-left: .4rem;
+}

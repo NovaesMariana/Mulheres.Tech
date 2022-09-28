@@ -12,3 +12,8 @@ $('.card').click(getHref);
 function getHref() {
     loadPage($(this).attr('data-href'));
 }
+
+reload();
+
+// Monta menu auxiliar:
+$('aside nav').html(aboutMenu);
